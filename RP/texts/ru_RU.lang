@@ -1,0 +1,21 @@
+
+
+# By Sunrise Studio Addon Translator
+tile.vc:advanced_note_block.name=Продвинутый нотный блок
+tile.vc:conductor.name=Водитель
+tile.vc:metronome.name=Метроном
+tile.vc:coda.name=Coda
+tile.vc:rester.name=Рестер
+
+advanced_note_block.title=Настройка блока заметок
+advanced_note_block.inst=Инстурмент
+advanced_note_block.note=Примечание 
+advanced_note_block.octave=Октава
+
+metronome.title=Настройка метронома
+metronome.bpm=Удары в минуту (BPM)
+metronome.subbpm=Должно быть в пределах 60-200
+metronome.sound=Воспроизвести звук в такт?
+
+rester.title=Настройка Rester
+rester.beats=Такты для отдыха (в 16-ых нотах  )

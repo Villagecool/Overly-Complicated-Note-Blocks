@@ -1,0 +1,144 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:advanced_note_bloc_funkyk", begone
+			"menu_category": {
+				"category": "none"
+			},
+			"states": {
+				"vc:arrows": [
+					"none",
+					"north",
+					"east",
+					"south",
+					"west"
+				],
+				"vc:outlined": [
+					false,
+					true
+				],
+				"vc:bpm_ones": {
+					"values": {
+						"min": 0,
+						"max": 9
+					}
+				},
+				"vc:bpm_tens": {
+					"values": {
+						"min": 6,
+						"max": 18
+					}
+				}
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				},
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:block_face"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:geometry": {
+				"identifier": "geometry.advanced_note_block",
+				"bone_visibility": {
+					"stem_north": "query.block_state('minecraft:block_face') == 'north'",
+					"stem_east": " query.block_state('minecraft:block_face') == 'east'",
+					"stem_south": "query.block_state('minecraft:block_face') == 'south'",
+					"stem_west": " query.block_state('minecraft:block_face') == 'west'",
+					"arrow_north": "query.block_state('minecraft:cardinal_direction') == 'north'",
+					"arrow_east": " query.block_state('minecraft:cardinal_direction') == 'east'",
+					"arrow_south": "query.block_state('minecraft:cardinal_direction') == 'south'",
+					"arrow_west": " query.block_state('minecraft:cardinal_direction') == 'west'"
+				}
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.2
+			},
+			"minecraft:transformation": {
+				"rotation": [
+					0,
+					180,
+					0
+				]
+			},
+			//"minecraft:placement_filter": {
+			//	"allowed_faces": [
+			//		"north",
+			//		"east",
+			//		"south",
+			//		"west",
+			//		"up"
+			//	],
+			//	"block_filter": [
+			//		"vc:advanced_note_block",
+			//		"vc:conductor"
+			//	]
+			//},
+			"minecraft:flammable": true,
+			"minecraft:map_color": "#7B4239",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_advanced_note_block",
+					"render_method": "alpha_test"
+				},
+				"top": {
+					"texture": "vc_advanced_note_block_top",
+					"render_method": "alpha_test"
+				},
+				"stems": {
+					"texture": "vc_advanced_note_block_ends",
+					"render_method": "alpha_test"
+				},
+				"arrows": {
+					"texture": "vc_advanced_note_block_arrows",
+					"render_method": "alpha_test"
+				},
+				"outline": {
+					"texture": "white_concrete",
+					"render_method": "blend",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:outlined') == true",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						],
+						"scale": [
+							-1,
+							-1,
+							-1
+						]
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.advanced_note_block_outlined",
+						"bone_visibility": {
+							"stem_north": "query.block_state('minecraft:block_face') == 'north'",
+							"stem_east": " query.block_state('minecraft:block_face') == 'east'",
+							"stem_south": "query.block_state('minecraft:block_face') == 'south'",
+							"stem_west": " query.block_state('minecraft:block_face') == 'west'",
+							"arrow_north": "query.block_state('minecraft:cardinal_direction') == 'north'",
+							"arrow_east": " query.block_state('minecraft:cardinal_direction') == 'east'",
+							"arrow_south": "query.block_state('minecraft:cardinal_direction') == 'south'",
+							"arrow_west": " query.block_state('minecraft:cardinal_direction') == 'west'"
+						}
+					}
+				}
+			}
+		]
+	}
+}

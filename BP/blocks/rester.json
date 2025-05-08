@@ -1,0 +1,41 @@
+{
+	"format_version": "1.21.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:rester",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"vc:beats": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_rester"
+				}
+				//"up": {
+				//	"texture": "vc_rester_top"
+				//},
+				//"down": {
+				//	"texture": "vc_rester_top"
+				//}
+			},
+			"minecraft:custom_components": [
+				"vc:rester"
+			],
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:map_color": "#909098",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.2
+			}
+		},
+		"permutations": []
+	}
+}

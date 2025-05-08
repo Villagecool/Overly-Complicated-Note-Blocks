@@ -1,0 +1,32 @@
+[
+    {
+        "flipbook_texture": "textures/blocks/metronome_anim",
+        "atlas_tile": "vc_metronome_anim",
+        "blend_frames": false,
+        "ticks_per_frame": 1,
+        "frames": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+        ]
+    }
+]

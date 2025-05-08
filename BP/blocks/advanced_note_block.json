@@ -1,0 +1,130 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:advanced_note_block",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"vc:note": [
+					"F#/Gb",
+					"G",
+					"G#/Ab",
+					"A",
+					"A#/Bb",
+					"B",
+					"C",
+					"C#/Db",
+					"D",
+					"D#/Eb",
+					"E",
+					"F"
+				],
+				"vc:octave": {
+					"values": {
+						"min": -2,
+						"max": 2
+					}
+				},
+				"vc:inst": [
+					"harp",
+					"bass",
+					"bells",
+					"bass_drum",
+					"flute",
+					"hi-hat",
+					"chimes",
+					"guitar",
+					"xylophone",
+					"vibraphone",
+					"cow_bell",
+					"didgeridoo",
+					"synthesizer",
+					"banjo",
+					"electric_piano"
+				]
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				},
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:block_face"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:geometry": {
+				"identifier": "geometry.advanced_note_block",
+				"bone_visibility": {
+					"stem_north": false,
+					"stem_east": false,
+					"stem_south": false,
+					"stem_west": false,
+					"arrow_north": false,
+					"arrow_east": false,
+					"arrow_south": false,
+					"arrow_west": false
+				}
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.2
+			},
+			"minecraft:custom_components": [
+				"vc:advanced_note_block"
+			],
+			"minecraft:transformation": {
+				"rotation": [
+					0,
+					180,
+					0
+				]
+			},
+			//"minecraft:placement_filter": {
+			//	"allowed_faces": [
+			//		"north",
+			//		"east",
+			//		"south",
+			//		"west",
+			//		"up"
+			//	],
+			//	"block_filter": [
+			//		"vc:advanced_note_block",
+			//		"vc:conductor"
+			//	]
+			//},
+			"minecraft:flammable": true,
+			"minecraft:map_color": "#7B4239",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_advanced_note_block",
+					"render_method": "alpha_test"
+				},
+				//"top": {
+				//	"texture": "vc_advanced_note_block_top",
+				//	"render_method": "alpha_test"
+				//},
+				"stems": {
+					"texture": "vc_advanced_note_block_ends",
+					"render_method": "alpha_test"
+				},
+				"arrows": {
+					"texture": "vc_advanced_note_block_arrows",
+					"render_method": "alpha_test"
+				},
+				"outline": {
+					"texture": "white_concrete",
+					"render_method": "blend",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			}
+		},
+		"permutations": []
+	}
+}

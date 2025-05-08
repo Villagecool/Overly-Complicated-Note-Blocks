@@ -1,0 +1,66 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:coda",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"vc:powered": [
+					false,
+					true
+				],
+				"vc:lit": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_coda"
+				},
+				"up": {
+					"texture": "vc_coda_top"
+				}
+			},
+			"minecraft:custom_components": [
+				"vc:coda",
+				"vc:redstone"
+			],
+			"minecraft:redstone_conductivity": {
+				"allows_wire_to_step_down": true,
+				"redstone_conductor": true
+			},
+			"minecraft:tick": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": true
+			},
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:map_color": "#909098",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.2
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:lit') == true",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "vc_coda_lit"
+						},
+						"up": {
+							"texture": "vc_coda_top"
+						}
+					}
+				}
+			}
+		]
+	}
+}

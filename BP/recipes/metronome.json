@@ -1,0 +1,33 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vc:metronome"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "#": {
+                "item": "planks"
+            },
+            "C": {
+                "item": "copper_ingot"
+            },
+            "R": {
+                "item": "redstone"
+            },
+            "S": {
+                "item": "stick"
+            }
+        },
+        "pattern": [
+            "#S#",
+            "CRC",
+            "###"
+        ],
+        "result": {
+            "item": "vc:metronome"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"vc:advanced_note_block": {
+		"sound": "wood"
+	},
+	"vc:conductor": {
+		"sound": "wood"
+	},
+	"vc:metronome": {
+		"sound": "wood"
+	},
+	"vc:rester": {
+		"sound": "bamboo"
+	},
+	"vc:coda": {
+		"sound": "stone",
+		"textures": "vc_coda"
+	}
+}

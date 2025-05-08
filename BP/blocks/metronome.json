@@ -1,0 +1,155 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:metronome",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"vc:side": [
+					"flipbook",
+					"left",
+					"mid",
+					"right"
+				],
+				"vc:powered": [
+					false,
+					true
+				],
+				"vc:sound": [
+					false,
+					true
+				],
+				"vc:bpm_ones": {
+					"values": {
+						"min": 0,
+						"max": 9
+					}
+				},
+				"vc:bpm_tens": {
+					"values": {
+						"min": 6,
+						"max": 20
+					}
+				}
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					],
+					"y_rotation_offset": 180
+				}
+			}
+		},
+		"components": {
+			"minecraft:flammable": true,
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:map_color": "#7B4239",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.2
+			},
+			"minecraft:redstone_conductivity": {
+				"allows_wire_to_step_down": true,
+				"redstone_conductor": true
+			},
+			"minecraft:tick": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": true
+			},
+			"minecraft:custom_components": [
+				"vc:metronome",
+				"vc:redstone"
+			],
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "noteblock"
+				},
+				"north": {
+					"texture": "vc_metronome"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:side') == 'left'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "noteblock"
+						},
+						"north": {
+							"texture": "vc_metronome_left"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:side') == 'right'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "noteblock"
+						},
+						"north": {
+							"texture": "vc_metronome_right"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:side') == 'flipbook'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "noteblock"
+						},
+						"north": {
+							"texture": "vc_metronome_anim"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"type": "minecraftBedrock",
+	"name": "Overly Complicated Note Blocks",
+	"namespace": "vc",
+	"authors": [
+		"Vlliage"
+	],
+	"targetVersion": "1.21.30",
+	"description": "makes note blocks tons more complex, but easier to make music!",
+	"experimentalGameplay": {
+		"creationOfCustomBiomes": false,
+		"upcomingCreatorFeatures": true,
+		"enableGameTestFramework": true,
+		"educationEdition": false
+	},
+	"bdsProject": false,
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	},
+	"worlds": [
+		"./worlds/*"
+	],
+	"compiler": {
+		"plugins": [
+			"generatorScripts",
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			"formatVersionCorrection",
+			[
+				"simpleRewrite",
+				{
+					"packName": "Overly Complicated Note Blocks"
+				}
+			]
+		]
+	}
+}

@@ -1,0 +1,64 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"product_type": "addon",
+		"authors": [
+			"Vlliage"
+		]
+	},
+	"header": {
+		"name": "Overly Complicated Note Blocks",
+		"description": "makes note blocks tons more complex, but easier to make music!",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "99d9509a-9205-405f-baaf-0c1577f38b8d",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "ebad189a-5726-4d2a-93cc-721dfc4b7b36",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "fd993207-5b56-4583-aab5-46c74eb88e46",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "ac4eabf9-0071-46ca-9576-bf4ade977207",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.18.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.2.0"
+		}
+	]
+}

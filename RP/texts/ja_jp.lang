@@ -1,0 +1,21 @@
+
+
+# By Sunrise Studio Addon Translator
+tile.vc:advanced_note_block.name=アドバンス・ノート・ブロック
+tile.vc:conductor.name=ドライバー
+tile.vc:metronome.name=メトロノーム
+tile.vc:coda.name=コーダ
+tile.vc:rester.name=レスター
+
+advanced_note_block.title=ノート・ブロックの設定
+advanced_note_block.inst=インストゥルメント
+advanced_note_block.note=注 
+advanced_note_block.octave=オクターブ
+
+metronome.title=メトロノームの設定
+metronome.bpm=ビート・パー・ミニット（BPM）
+metronome.subbpm=60～200の間であること
+metronome.sound=サウンド・オン・ビート？
+
+rester.title=レスターの設定
+rester.beats=拍の休符（16分音符の場合 ）

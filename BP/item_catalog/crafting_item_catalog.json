@@ -1,0 +1,562 @@
+{
+   "format_version": "1.21.60",
+   "minecraft:crafting_items_catalog": {
+      "categories": [
+         {
+            "category_name": "items",
+            "groups": [
+               {
+                  "items": [
+                     "minecraft:stick"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:bed",
+                     "name": "minecraft:itemGroup.name.bed"
+                  },
+                  "items": [
+                     "minecraft:bed",
+                     "minecraft:bed:8",
+                     "minecraft:bed:7",
+                     "minecraft:bed:15",
+                     "minecraft:bed:12",
+                     "minecraft:bed:14",
+                     "minecraft:bed:1",
+                     "minecraft:bed:4",
+                     "minecraft:bed:5",
+                     "minecraft:bed:13",
+                     "minecraft:bed:9",
+                     "minecraft:bed:3",
+                     "minecraft:bed:11",
+                     "minecraft:bed:10",
+                     "minecraft:bed:2",
+                     "minecraft:bed:6"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:torch",
+                     "minecraft:soul_torch",
+                     "minecraft:sea_pickle",
+                     "minecraft:lantern",
+                     "minecraft:soul_lantern"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:candle",
+                     "name": "minecraft:itemGroup.name.candles"
+                  },
+                  "items": [
+                     "minecraft:candle",
+                     "minecraft:white_candle",
+                     "minecraft:orange_candle",
+                     "minecraft:magenta_candle",
+                     "minecraft:light_blue_candle",
+                     "minecraft:yellow_candle",
+                     "minecraft:lime_candle",
+                     "minecraft:pink_candle",
+                     "minecraft:gray_candle",
+                     "minecraft:light_gray_candle",
+                     "minecraft:cyan_candle",
+                     "minecraft:purple_candle",
+                     "minecraft:blue_candle",
+                     "minecraft:brown_candle",
+                     "minecraft:green_candle",
+                     "minecraft:red_candle",
+                     "minecraft:black_candle"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:crafting_table",
+                     "minecraft:cartography_table",
+                     "minecraft:fletching_table",
+                     "minecraft:smithing_table",
+                     "minecraft:beehive",
+                     "minecraft:suspicious_sand",
+                     "minecraft:suspicious_gravel",
+                     "minecraft:campfire",
+                     "minecraft:soul_campfire",
+                     "minecraft:furnace",
+                     "minecraft:blast_furnace",
+                     "minecraft:smoker",
+                     "minecraft:respawn_anchor",
+                     "minecraft:brewing_stand"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:anvil",
+                     "name": "minecraft:itemGroup.name.anvil"
+                  },
+                  "items": [
+                     "minecraft:anvil",
+                     "minecraft:chipped_anvil",
+                     "minecraft:damaged_anvil"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:grindstone",
+                     "minecraft:enchanting_table",
+                     "minecraft:bookshelf",
+                     "minecraft:chiseled_bookshelf",
+                     "minecraft:lectern",
+                     "minecraft:cauldron",
+                     "minecraft:composter"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:chest",
+                     "name": "minecraft:itemGroup.name.chest"
+                  },
+                  "items": [
+                     "minecraft:chest",
+                     "minecraft:trapped_chest",
+                     "minecraft:ender_chest"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:barrel"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:undyed_shulker_box",
+                     "name": "minecraft:itemGroup.name.shulkerBox"
+                  },
+                  "items": [
+                     "minecraft:undyed_shulker_box",
+                     "minecraft:white_shulker_box",
+                     "minecraft:light_gray_shulker_box",
+                     "minecraft:gray_shulker_box",
+                     "minecraft:black_shulker_box",
+                     "minecraft:brown_shulker_box",
+                     "minecraft:red_shulker_box",
+                     "minecraft:orange_shulker_box",
+                     "minecraft:yellow_shulker_box",
+                     "minecraft:lime_shulker_box",
+                     "minecraft:green_shulker_box",
+                     "minecraft:cyan_shulker_box",
+                     "minecraft:light_blue_shulker_box",
+                     "minecraft:blue_shulker_box",
+                     "minecraft:purple_shulker_box",
+                     "minecraft:magenta_shulker_box",
+                     "minecraft:pink_shulker_box"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:armor_stand",
+                     "minecraft:noteblock",
+                     "minecraft:jukebox",
+                     "vc:advanced_note_block",
+                     "vc:coda",
+                     "vc:metronome"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:music_disc_13",
+                     "name": "minecraft:itemGroup.name.record"
+                  },
+                  "items": [
+                     "minecraft:music_disc_13",
+                     "minecraft:music_disc_cat",
+                     "minecraft:music_disc_blocks",
+                     "minecraft:music_disc_chirp",
+                     "minecraft:music_disc_far",
+                     "minecraft:music_disc_mall",
+                     "minecraft:music_disc_mellohi",
+                     "minecraft:music_disc_stal",
+                     "minecraft:music_disc_strad",
+                     "minecraft:music_disc_ward",
+                     "minecraft:music_disc_11",
+                     "minecraft:music_disc_wait",
+                     "minecraft:music_disc_otherside",
+                     "minecraft:music_disc_5",
+                     "minecraft:music_disc_pigstep",
+                     "minecraft:music_disc_relic",
+                     "minecraft:music_disc_creator",
+                     "minecraft:music_disc_creator_music_box",
+                     "minecraft:music_disc_precipice"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:disc_fragment_5",
+                     "minecraft:glowstone_dust",
+                     "minecraft:glowstone",
+                     "minecraft:redstone_lamp",
+                     "minecraft:sea_lantern"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:oak_sign",
+                     "name": "minecraft:itemGroup.name.sign"
+                  },
+                  "items": [
+                     "minecraft:oak_sign",
+                     "minecraft:spruce_sign",
+                     "minecraft:birch_sign",
+                     "minecraft:jungle_sign",
+                     "minecraft:acacia_sign",
+                     "minecraft:dark_oak_sign",
+                     "minecraft:mangrove_sign",
+                     "minecraft:cherry_sign",
+                     "minecraft:pale_oak_sign",
+                     "minecraft:bamboo_sign",
+                     "minecraft:crimson_sign",
+                     "minecraft:warped_sign"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:oak_hanging_sign",
+                     "name": "minecraft:itemGroup.name.hanging_sign"
+                  },
+                  "items": [
+                     "minecraft:oak_hanging_sign",
+                     "minecraft:spruce_hanging_sign",
+                     "minecraft:birch_hanging_sign",
+                     "minecraft:jungle_hanging_sign",
+                     "minecraft:acacia_hanging_sign",
+                     "minecraft:dark_oak_hanging_sign",
+                     "minecraft:mangrove_hanging_sign",
+                     "minecraft:cherry_hanging_sign",
+                     "minecraft:pale_oak_hanging_sign",
+                     "minecraft:bamboo_hanging_sign",
+                     "minecraft:crimson_hanging_sign",
+                     "minecraft:warped_hanging_sign"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:painting",
+                     "minecraft:frame",
+                     "minecraft:glow_frame",
+                     "minecraft:honey_bottle",
+                     "minecraft:flower_pot",
+                     "minecraft:bowl",
+                     "minecraft:bucket",
+                     "minecraft:milk_bucket",
+                     "minecraft:water_bucket",
+                     "minecraft:lava_bucket",
+                     "minecraft:cod_bucket",
+                     "minecraft:salmon_bucket",
+                     "minecraft:tropical_fish_bucket",
+                     "minecraft:pufferfish_bucket",
+                     "minecraft:powder_snow_bucket",
+                     "minecraft:axolotl_bucket",
+                     "minecraft:tadpole_bucket"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:creeper_head",
+                     "name": "minecraft:itemGroup.name.skull"
+                  },
+                  "items": [
+                     "minecraft:player_head",
+                     "minecraft:zombie_head",
+                     "minecraft:creeper_head",
+                     "minecraft:dragon_head",
+                     "minecraft:skeleton_skull",
+                     "minecraft:wither_skeleton_skull",
+                     "minecraft:piglin_head"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:beacon",
+                     "minecraft:bell",
+                     "minecraft:conduit",
+                     "minecraft:stonecutter_block",
+                     "minecraft:coal",
+                     "minecraft:charcoal",
+                     "minecraft:diamond",
+                     "minecraft:iron_nugget",
+                     "minecraft:raw_iron",
+                     "minecraft:raw_gold",
+                     "minecraft:raw_copper",
+                     "minecraft:copper_ingot",
+                     "minecraft:iron_ingot",
+                     "minecraft:netherite_scrap",
+                     "minecraft:netherite_ingot",
+                     "minecraft:gold_nugget",
+                     "minecraft:gold_ingot",
+                     "minecraft:emerald",
+                     "minecraft:quartz",
+                     "minecraft:clay_ball",
+                     "minecraft:brick",
+                     "minecraft:netherbrick",
+                     "minecraft:resin_brick",
+                     "minecraft:prismarine_shard",
+                     "minecraft:amethyst_shard",
+                     "minecraft:prismarine_crystals",
+                     "minecraft:nautilus_shell",
+                     "minecraft:heart_of_the_sea",
+                     "minecraft:turtle_scute",
+                     "minecraft:armadillo_scute",
+                     "minecraft:phantom_membrane",
+                     "minecraft:string",
+                     "minecraft:feather",
+                     "minecraft:flint",
+                     "minecraft:gunpowder",
+                     "minecraft:leather",
+                     "minecraft:rabbit_hide",
+                     "minecraft:rabbit_foot",
+                     "minecraft:fire_charge",
+                     "minecraft:blaze_rod",
+                     "minecraft:breeze_rod",
+                     "minecraft:heavy_core",
+                     "minecraft:blaze_powder",
+                     "minecraft:magma_cream",
+                     "minecraft:fermented_spider_eye",
+                     "minecraft:echo_shard",
+                     "minecraft:dragon_breath",
+                     "minecraft:shulker_shell",
+                     "minecraft:ghast_tear",
+                     "minecraft:slime_ball",
+                     "minecraft:ender_pearl",
+                     "minecraft:ender_eye",
+                     "minecraft:nether_star",
+                     "minecraft:end_rod",
+                     "minecraft:lightning_rod",
+                     "minecraft:end_crystal",
+                     "minecraft:paper",
+                     "minecraft:book",
+                     "minecraft:writable_book"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:oak_boat",
+                     "name": "minecraft:itemGroup.name.boat"
+                  },
+                  "items": [
+                     "minecraft:oak_boat",
+                     "minecraft:spruce_boat",
+                     "minecraft:birch_boat",
+                     "minecraft:jungle_boat",
+                     "minecraft:acacia_boat",
+                     "minecraft:dark_oak_boat",
+                     "minecraft:mangrove_boat",
+                     "minecraft:cherry_boat",
+                     "minecraft:pale_oak_boat",
+                     "minecraft:bamboo_raft"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:oak_chest_boat",
+                     "name": "minecraft:itemGroup.name.chestboat"
+                  },
+                  "items": [
+                     "minecraft:oak_chest_boat",
+                     "minecraft:spruce_chest_boat",
+                     "minecraft:birch_chest_boat",
+                     "minecraft:jungle_chest_boat",
+                     "minecraft:acacia_chest_boat",
+                     "minecraft:dark_oak_chest_boat",
+                     "minecraft:mangrove_chest_boat",
+                     "minecraft:cherry_chest_boat",
+                     "minecraft:pale_oak_chest_boat",
+                     "minecraft:bamboo_chest_raft"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:rail",
+                     "name": "minecraft:itemGroup.name.rail"
+                  },
+                  "items": [
+                     "minecraft:rail",
+                     "minecraft:golden_rail",
+                     "minecraft:detector_rail",
+                     "minecraft:activator_rail"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:minecart",
+                     "name": "minecraft:itemGroup.name.minecart"
+                  },
+                  "items": [
+                     "minecraft:minecart",
+                     "minecraft:chest_minecart",
+                     "minecraft:hopper_minecart",
+                     "minecraft:tnt_minecart"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:redstone",
+                     "minecraft:redstone_block",
+                     "minecraft:redstone_torch",
+                     "minecraft:lever"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:wooden_button",
+                     "name": "minecraft:itemGroup.name.buttons"
+                  },
+                  "items": [
+                     "minecraft:wooden_button",
+                     "minecraft:spruce_button",
+                     "minecraft:birch_button",
+                     "minecraft:jungle_button",
+                     "minecraft:acacia_button",
+                     "minecraft:dark_oak_button",
+                     "minecraft:mangrove_button",
+                     "minecraft:cherry_button",
+                     "minecraft:pale_oak_button",
+                     "minecraft:bamboo_button",
+                     "minecraft:stone_button",
+                     "minecraft:crimson_button",
+                     "minecraft:warped_button",
+                     "minecraft:polished_blackstone_button"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:tripwire_hook"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:wooden_pressure_plate",
+                     "name": "minecraft:itemGroup.name.pressurePlate"
+                  },
+                  "items": [
+                     "minecraft:wooden_pressure_plate",
+                     "minecraft:spruce_pressure_plate",
+                     "minecraft:birch_pressure_plate",
+                     "minecraft:jungle_pressure_plate",
+                     "minecraft:acacia_pressure_plate",
+                     "minecraft:dark_oak_pressure_plate",
+                     "minecraft:mangrove_pressure_plate",
+                     "minecraft:cherry_pressure_plate",
+                     "minecraft:pale_oak_pressure_plate",
+                     "minecraft:bamboo_pressure_plate",
+                     "minecraft:crimson_pressure_plate",
+                     "minecraft:warped_pressure_plate",
+                     "minecraft:stone_pressure_plate",
+                     "minecraft:light_weighted_pressure_plate",
+                     "minecraft:heavy_weighted_pressure_plate",
+                     "minecraft:polished_blackstone_pressure_plate"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:observer",
+                     "minecraft:daylight_detector",
+                     "minecraft:repeater",
+                     "minecraft:comparator",
+                     "minecraft:hopper",
+                     "minecraft:dropper:3",
+                     "minecraft:dispenser:3",
+                     "minecraft:crafter",
+                     "minecraft:piston:1",
+                     "minecraft:sticky_piston:1",
+                     "minecraft:tnt",
+                     "minecraft:name_tag",
+                     "minecraft:loom"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:creeper_banner_pattern",
+                     "name": "minecraft:itemGroup.name.banner_pattern"
+                  },
+                  "items": [
+                     "minecraft:creeper_banner_pattern",
+                     "minecraft:skull_banner_pattern",
+                     "minecraft:flower_banner_pattern",
+                     "minecraft:mojang_banner_pattern",
+                     "minecraft:field_masoned_banner_pattern",
+                     "minecraft:bordure_indented_banner_pattern",
+                     "minecraft:piglin_banner_pattern",
+                     "minecraft:globe_banner_pattern",
+                     "minecraft:flow_banner_pattern",
+                     "minecraft:guster_banner_pattern"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:archer_pottery_sherd",
+                     "name": "minecraft:itemGroup.name.potterySherds"
+                  },
+                  "items": [
+                     "minecraft:angler_pottery_sherd",
+                     "minecraft:archer_pottery_sherd",
+                     "minecraft:arms_up_pottery_sherd",
+                     "minecraft:blade_pottery_sherd",
+                     "minecraft:brewer_pottery_sherd",
+                     "minecraft:burn_pottery_sherd",
+                     "minecraft:danger_pottery_sherd",
+                     "minecraft:explorer_pottery_sherd",
+                     "minecraft:flow_pottery_sherd",
+                     "minecraft:friend_pottery_sherd",
+                     "minecraft:guster_pottery_sherd",
+                     "minecraft:heart_pottery_sherd",
+                     "minecraft:heartbreak_pottery_sherd",
+                     "minecraft:howl_pottery_sherd",
+                     "minecraft:miner_pottery_sherd",
+                     "minecraft:mourner_pottery_sherd",
+                     "minecraft:plenty_pottery_sherd",
+                     "minecraft:prize_pottery_sherd",
+                     "minecraft:scrape_pottery_sherd",
+                     "minecraft:sheaf_pottery_sherd",
+                     "minecraft:shelter_pottery_sherd",
+                     "minecraft:skull_pottery_sherd",
+                     "minecraft:snort_pottery_sherd"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "minecraft:netherite_upgrade_smithing_template",
+                     "name": "minecraft:itemGroup.name.smithing_templates"
+                  },
+                  "items": [
+                     "minecraft:netherite_upgrade_smithing_template",
+                     "minecraft:sentry_armor_trim_smithing_template",
+                     "minecraft:vex_armor_trim_smithing_template",
+                     "minecraft:wild_armor_trim_smithing_template",
+                     "minecraft:coast_armor_trim_smithing_template",
+                     "minecraft:dune_armor_trim_smithing_template",
+                     "minecraft:wayfinder_armor_trim_smithing_template",
+                     "minecraft:shaper_armor_trim_smithing_template",
+                     "minecraft:raiser_armor_trim_smithing_template",
+                     "minecraft:host_armor_trim_smithing_template",
+                     "minecraft:ward_armor_trim_smithing_template",
+                     "minecraft:silence_armor_trim_smithing_template",
+                     "minecraft:tide_armor_trim_smithing_template",
+                     "minecraft:snout_armor_trim_smithing_template",
+                     "minecraft:rib_armor_trim_smithing_template",
+                     "minecraft:eye_armor_trim_smithing_template",
+                     "minecraft:spire_armor_trim_smithing_template",
+                     "minecraft:flow_armor_trim_smithing_template",
+                     "minecraft:bolt_armor_trim_smithing_template"
+                  ]
+               },
+               {
+                  "items": [
+                     "minecraft:chain",
+                     "minecraft:target",
+                     "minecraft:decorated_pot",
+                     "minecraft:trial_key",
+                     "minecraft:ominous_trial_key"
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

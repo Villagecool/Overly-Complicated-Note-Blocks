@@ -1,0 +1,56 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Overly Complicated Note Blocks",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"vc_advanced_note_block": {
+			"textures": "textures/blocks/advanced_note_block"
+		},
+		"vc_advanced_note_block_top": {
+			"textures": "textures/blocks/advanced_note_block_top"
+		},
+		"vc_advanced_note_block_ends": {
+			"textures": "textures/blocks/advanced_note_block_top_ends"
+		},
+		"vc_advanced_note_block_arrows": {
+			"textures": "textures/blocks/advanced_note_block_top_arrows"
+		},
+		"vc_conductor": {
+			"textures": "textures/blocks/conductor_side"
+		},
+		"vc_conductor_top": {
+			"textures": "textures/blocks/conductor_top"
+		},
+		"vc_conductor_bottom": {
+			"textures": "textures/blocks/conductor_bottom"
+		},
+		"vc_rester": {
+			"textures": "textures/blocks/rester"
+		},
+		"vc_rester_top": {
+			"textures": "textures/blocks/conductor_bottom"
+		},
+		"vc_metronome": {
+			"textures": "textures/blocks/metronome_mid"
+		},
+		"vc_metronome_anim": {
+			"textures": "textures/blocks/metronome_mid"
+		},
+		"vc_metronome_left": {
+			"textures": "textures/blocks/metronome_left"
+		},
+		"vc_metronome_right": {
+			"textures": "textures/blocks/metronome_right"
+		},
+		"vc_coda": {
+			"textures": "textures/blocks/coda"
+		},
+		"vc_coda_top": {
+			"textures": "textures/blocks/coda_top"
+		},
+		"vc_coda_lit": {
+			"textures": "textures/blocks/coda_lit"
+		}
+	}
+}

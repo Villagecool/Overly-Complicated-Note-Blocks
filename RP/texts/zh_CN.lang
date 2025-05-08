@@ -1,0 +1,21 @@
+
+
+# By Sunrise Studio Addon Translator
+tile.vc:advanced_note_block.name=高级注释块
+tile.vc:conductor.name=司机
+tile.vc:metronome.name=节拍器
+tile.vc:coda.name=尾声
+tile.vc:rester.name=Rester
+
+advanced_note_block.title=配置注释块
+advanced_note_block.inst=Insturment
+advanced_note_block.note=注 
+advanced_note_block.octave=八度
+
+metronome.title=配置节拍器
+metronome.bpm=每分钟节拍 (BPM)
+metronome.subbpm=必须在 60-200 之间
+metronome.sound=按节拍播放声音？
+
+rester.title=配置 Rester
+rester.beats=休息的节拍 ( 以 16 分音符为单位  )

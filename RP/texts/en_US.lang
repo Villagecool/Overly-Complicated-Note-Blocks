@@ -1,0 +1,18 @@
+tile.vc:advanced_note_block.name=Advanced Note Block
+tile.vc:conductor.name=Conductor
+tile.vc:metronome.name=Metronome
+tile.vc:coda.name=Coda
+tile.vc:rester.name=Rester
+
+advanced_note_block.title=Configure Note Block
+advanced_note_block.inst=Insturment
+advanced_note_block.note=Note 
+advanced_note_block.octave=Octave
+
+metronome.title=Configure Metronome
+metronome.bpm=Beats Per Minute (BPM)
+metronome.subbpm=Must Be Between 60-200
+metronome.sound=Play Sound on Beat?
+
+rester.title=Configure Rester
+rester.beats=Beats to rest for ( In 16th notes  )
