@@ -36,7 +36,7 @@ The rester allows for a breif pause of varying length between notes on a Coda st
 
 ![Rester](/renders/rester.gif)
 
-All Note Blocks above it will be delayed by the set abount of time.
+All Note Blocks above it will be delayed by the set amount of time.
 
 ![Rester GUI](/renders/rester-ui.png)
 
@@ -45,9 +45,10 @@ The Metronome is the most important block for making music sequences.
 
 ![Metronome Block](/renders/metronome.gif)
 
-The metronome can be configured to set a BPM for a sequence (Between 60-200 BMP)
+The metronome can be configured to set a BPM for a sequence (Between 60-200 BMP) in 4/4 time.
 > [!WARNING]
 > BPM runs on in-game-ticks, if there is high lag in the world, then songs will be slowed down.
+
 Once the metronome is activated by Redstone or a player, All lines of adjacent Coda blocks will play to the set BPM.
 
 <sup>Rester Blocks will also be timed correctly<sup>
