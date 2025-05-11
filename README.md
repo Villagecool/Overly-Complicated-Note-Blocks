@@ -13,6 +13,7 @@ Insturment, Note, and Octave can all be adjusted within the block.
 
 To play a note, simply **interact** with the block.
 - To edit properties, **sneak** and **interact** with ***an empty hand***
+
 <sup>These blocks do not work with redstone alone, due to possible complications with music systems</sup>
 
 ## Coda
@@ -28,6 +29,7 @@ However, it has other uses among other blocks.
 
 > [!IMPORTANT]
 > Coda's need to be DIRECTLY powered with redstone to activate. So some things may not work as expected
+
 > [!TIP]
 > For technical users, it is important to note that Coda's will output two block updates when activated.
 
