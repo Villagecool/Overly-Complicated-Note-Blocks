@@ -28,7 +28,7 @@ On it's own, the Coda can be used to power Advanced Note Block(s) with redstone
 However, it has other uses among other blocks.
 
 > [!IMPORTANT]
-> Coda's need to be DIRECTLY powered with redstone to activate. So some things may not work as expected
+> **IN OLDER VERSIONS** Coda's need to be DIRECTLY powered with redstone to activate. So some things may not work as expected. This has been resolved in v1.1.0
 
 > [!TIP]
 > For technical users, it is important to note that Coda's will output two block updates when activated.
@@ -58,3 +58,11 @@ Once the metronome is activated by Redstone or a player, All lines of adjacent C
 ![Metronome GUI](/renders/metronome-ui.png)
 
 If *sound* is active, the Metronome will make clicks on a beat, just like a real metronome.
+
+## Sequenced Redstone Emitter
+The Sequenced Redstone Emitter will emmit a 5-tick pulse of redstone when set of with a song. It should be placed like a regular note block
+
+![SRE](/renders/sequenced_emitter.gif)
+
+This can be extremely helpful for special effects or redirecting song lines.
+![SRE Connection](/renders/connection.png)
