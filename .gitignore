@@ -5,3 +5,6 @@ Desktop.ini
 !.bridge/compiler/
 !.bridge/extensions
 builds
+./node_modules
+node_modules
+/node_modules

@@ -21,7 +21,8 @@
 			"###"
 		],
 		"result": {
-			"item": "vc:coda"
+			"item": "vc:coda",
+			"count": 8
 		}
 	}
 }

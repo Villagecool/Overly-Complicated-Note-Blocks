@@ -1,11 +1,13 @@
 
 
-# By Sunrise Studio Addon Translator
+## By Sunrise Studio Addon Translator
 tile.vc:advanced_note_block.name=Bloque de notas avanzado
+tile.vc:advanced_note_block_ext.name=Bloque de notas avanzado
 tile.vc:conductor.name=Conductor
 tile.vc:metronome.name=Metrónomo
 tile.vc:coda.name=Coda
 tile.vc:rester.name=Rester
+tile.vc:sequenced_emitter.name=Emisor de Redstone Secuenciado
 
 advanced_note_block.title=Configurar bloque de notas
 advanced_note_block.inst=Insturmento

@@ -9,7 +9,7 @@
         ],
         "key": {
             "#": {
-                "item": "planks"
+                "tag":"minecraft:planks"
             },
             "C": {
                 "item": "copper_ingot"

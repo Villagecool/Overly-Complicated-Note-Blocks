@@ -6,46 +6,63 @@ import "./redstone_test.js"
 const DEBUG = false
 
 const colors = ["#77D700", "#95C000", "#B2A500", "#CC8600", "#E26500", "#F34100", "#FC1E00", "#FE000F", "#F70033", "#E8005A", "#CF0083", "#AE00A9", "#8600CC", "#8600CC", "#5B00E7", "#2D00F9", "#020AFE", "#0037F6", "#0068E0", "#009ABC", "#00C68D", "#00E958", "#00FC21", "#1FFC00", "#59E800", "#94C100"]
-const insts = [ "harp", "bass", "bells", "bass_drum", "flute",  "hi-hat", "chimes", "guitar", "xylophone", "vibraphone", "cow_bell", "didgeridoo", "synthesizer", "banjo", "electric_piano"]
+const insts = [ "harp", "bass", "bells", "bass_drum", "flute",  "hi-hat", "snare", "chimes", "guitar", "xylophone", "vibraphone", "cow_bell", "didgeridoo", "synthesizer", "banjo", "electric_piano", "trumpet", "distorted_trumpet", "trombone", "distorted_trombone", "electric_guitar"]
 const noteNames = ["F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F"]
+let lastUsedDefaults = [0, 4, 0]
 
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
     initEvent.blockComponentRegistry.registerCustomComponent('vc:advanced_note_block', {
         beforeOnPlayerPlace: e=> {
                 SERVER.system.run(()=>{
             const popUp = new UI.ModalFormData()
             .title("%advanced_note_block.title")
-            .dropdown('%advanced_note_block.inst', arrayToTitleCase(insts), 0)
-            .dropdown('%advanced_note_block.note', noteNames, 4)
-            .slider('%advanced_note_block.octave', -2, 2, 1, 0)
+            .dropdown('%advanced_note_block.inst', arrayToTitleCase(insts), {defaultValueIndex: lastUsedDefaults[0]})
+            .dropdown('%advanced_note_block.note', noteNames, {defaultValueIndex: lastUsedDefaults[1]})
+            .slider('%advanced_note_block.octave', -2, 2, {valueStep: 1, defaultValue: lastUsedDefaults[2]})
             //.slider('Delay (In 16th notes)', 0, 4, 1, 0)
             .show(e.player).then((r) => {
+                
+                    if (r.canceled) {
+                        e.dimension.runCommand(`setblock ${vec3toString(e.block.location)} air destroy`)
+                        return;
+                    };
+
                     if (DEBUG) console.warn(`${insts[r.formValues[0]]} | ${noteNames[r.formValues[1]]} | ${r.formValues[2]} | ${r.formValues[3]}`)
+
+                    //There would be too many block states, so the note block needs to be split into two individual blocks
+                    if (["trumpet", "distorted_trumpet", "trombone", "distorted_trombone", "electric_guitar", "snare"].includes(insts[r.formValues[0]])) e.block.setType("vc:advanced_note_block_ext");
+                    else e.block.setType("vc:advanced_note_block"); //this is mostly unnecessary unless the player places down the wrong block
+
                     setPermutation(e.block, 'vc:inst', insts[r.formValues[0]])
                     setPermutation(e.block, 'vc:note', noteNames[r.formValues[1]])
                     setPermutation(e.block, 'vc:octave', r.formValues[2])
+                    lastUsedDefaults = r.formValues
+                    
                     //setPermutation(e.block, 'vc:delay', r.formValues[3])
                     noteTime(e.block)
                 })
         
-            }).catch((e) => {
+            })/*.catch((e) => {
                 console.error(e, e.stack);
-            })
+            })*/
         },
         onPlayerInteract: e => {
             if (e.player.isSneaking) {
                 const popUp = new UI.ModalFormData()
                 .title("%advanced_note_block.title")
-                .dropdown('%advanced_note_block.inst', arrayToTitleCase(insts), insts.indexOf(e.block.permutation.getState('vc:inst')))
-                .dropdown('%advanced_note_block.note', noteNames, noteNames.indexOf(e.block.permutation.getState('vc:note')))
-                .slider('%advanced_note_block.octave', -2, 2, 1, e.block.permutation.getState('vc:octave'))
+                .dropdown('%advanced_note_block.inst', arrayToTitleCase(insts), {defaultValueIndex: insts.indexOf(e.block.permutation.getState('vc:inst'))})
+                .dropdown('%advanced_note_block.note', noteNames, {defaultValueIndex: noteNames.indexOf(e.block.permutation.getState('vc:note'))})
+                .slider('%advanced_note_block.octave', -2, 2, {valueStep: 1, defaultValue: e.block.permutation.getState('vc:octave')})
                 //.slider('Delay (In 16th notes)', 0, 4, 1, e.block.permutation.getState('vc:delay'))
                 .show(e.player).then((r) => {
                     if (r.canceled) return;
                     if (DEBUG) console.warn(`${insts[r.formValues[0]]} | ${noteNames[r.formValues[1]]} | ${r.formValues[2]} | ${r.formValues[3]}`)
+                    if (["trumpet", "distorted_trumpet", "trombone", "distorted_trombone", "electric_guitar", "snare"].includes(insts[r.formValues[0]])) e.block.setType("vc:advanced_note_block_ext");
+                    else e.block.setType("vc:advanced_note_block");
                     setPermutation(e.block, 'vc:inst', insts[r.formValues[0]])
                     setPermutation(e.block, 'vc:note', noteNames[r.formValues[1]])
                     setPermutation(e.block, 'vc:octave', r.formValues[2])
+                    lastUsedDefaults = r.formValues
                     //setPermutation(e.block, 'vc:delay', r.formValues[3])
                     noteTime(e.block)
             
@@ -63,7 +80,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const popUp = new UI.ModalFormData()
             .title("%metronome.title")
             .textField('%metronome.bpm\n\n  =', '%metronome.subbpm')
-            .toggle('%metronome.sound', true)
+            .toggle('%metronome.sound', {defaultValue: true})
             .show(e.player).then((r) => {
                     
                     if (r.canceled || String(Number(r.formValues[0])) != r.formValues[0]) {
@@ -80,17 +97,17 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                     setPermutation(e.block, 'vc:sound', r.formValues[1])
                 })
         
-            }).catch((e) => {
+            })/*.catch((e) => {
                 console.error(e, e.stack);
-            })
+            })*/
         },
         onPlayerInteract: e => {
             if (e.player.isSneaking) {
                 SERVER.system.run(()=>{
                 const popUp = new UI.ModalFormData()
                 .title("%metronome.title")
-                .textField('%metronome.bpm\n\n  =', '%metronome.subbpm', `${e.block.permutation.getState('vc:bpm_tens')}${e.block.permutation.getState('vc:bpm_ones')}`)
-                .toggle('%metronome.sound', e.block.permutation.getState('vc:sound'))
+                .textField('%metronome.bpm\n\n  =', '%metronome.subbpm', {defaultValue: `${e.block.permutation.getState('vc:bpm_tens')}${e.block.permutation.getState('vc:bpm_ones')}`})
+                .toggle('%metronome.sound', {defaultValue: e.block.permutation.getState('vc:sound')})
                 .show(e.player).then((r) => {
                         if (r.canceled) return;
                         if (String(Number(r.formValues[0])) != r.formValues[0]) return;
@@ -103,9 +120,9 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                         setPermutation(e.block, 'vc:sound', r.formValues[1])
                     })
             
-                }).catch((e) => {
+                })/*.catch((e) => {
                     console.error(e, e.stack);
-                })
+                })*/
             }
             else {
                 findScores(e.block)
@@ -123,7 +140,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             SERVER.system.run(()=>{
             const popUp = new UI.ModalFormData()
             .title("%rester.title")
-            .slider("%rester.beats", 0, 3, 1, 0)
+            .slider("%rester.beats", 0, 3, {valueStep: 1, defaultValue: 0})
             .show(e.player).then((r) => {
                     
                     if (r.canceled || String(Number(r.formValues[0])) != r.formValues[0]) {
@@ -133,27 +150,28 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                     setPermutation(e.block, 'vc:beats', r.formValues[0])
                 })
         
-            }).catch((e) => {
+            })/*.catch((e) => {
                 console.error(e, e.stack);
-            })
+            })*/
         },
         onPlayerInteract: e => {
             SERVER.system.run(()=>{
             const popUp = new UI.ModalFormData()
             .title("%rester.title")
-            .slider("%rester.beats", 0, 3, 1, e.block.permutation.getState('vc:beats'))
+            .slider("%rester.beats", 0, 3, {valueStep: 1, defaultValue: e.block.permutation.getState('vc:beats')})
             .show(e.player).then((r) => {
                     
                     if (r.canceled || String(Number(r.formValues[0])) != r.formValues[0]) return;
                     setPermutation(e.block, 'vc:beats', r.formValues[0])
                 })
         
-            }).catch((e) => {
+            })/*.catch((e) => {
                 console.error(e, e.stack);
-            })
+            })*/
         }
     });
 })
+/**@param {SERVER.Block} block*/
 export function noteTime(block) {
     const sound = 'note.' + block.permutation.getState('vc:inst').toLocaleLowerCase().replace(' ', '_')
         .replace('vibraphone', 'iron_xylophone')
@@ -163,6 +181,9 @@ export function noteTime(block) {
         .replace('bells', 'bell')
         .replace('bass_drum', 'bd')
         .replace('hi-hat', 'hat')
+        .replace('distorted_trumpet', 'trumpet_exposed')
+        .replace('distorted_trombone', 'trumpet_oxidized')
+        .replace('trombone', 'trumpet_weathered')
 
     const pitch = (2 ** ((getUseCount(block.permutation.getState('vc:note'), block.permutation.getState('vc:octave')) - 12) / 12))
 
@@ -185,8 +206,9 @@ export function noteTime(block) {
         console.log(JSON.stringify(hexToRgb(lecolor)))
     }
 }
+/**@param {SERVER.Block} block*/
 export function findScores(block) {
-    console.warn(1)
+    //console.warn(1)
     let beat = -1;
     const tickDelay = bpmToTicks(Number(`${block.permutation.getState('vc:bpm_tens')}${block.permutation.getState('vc:bpm_ones')}` ));
 
@@ -224,24 +246,48 @@ export function findScores(block) {
     }
 }
 
+/**
+ * @param {SERVER.Block} block
+ * @param {Number} beat
+*/
 function switchMet(block, beat) {
     if (block.permutation.getState('vc:sound')) block.dimension.playSound('note.hat', block.center(), {pitch: (beat % 4 == 0 ? 1 : 0.5)})
     var side = (block.permutation.getState('vc:side') == 'right') ? 'left' : 'right'
     setPermutation(block, 'vc:side', 'mid')
     SERVER.system.runTimeout(() => { setPermutation(block, 'vc:side', side) }, 1)
 }
+
+/**
+ * @param {SERVER.Block} block
+ * @param {String} sound
+ * @param {Number} tickDelay
+*/
 export function doTheCoda(block, sound, tickDelay) {
     setPermutation(block, 'vc:lit', true)
     SERVER.system.runTimeout(() => { setPermutation(block, 'vc:lit', false) }, 5)
-    if (sound && block.above(1).typeId != 'vc:advanced_note_block' && block.above(1).typeId != 'vc:rester') {block.dimension.playSound('note.bd', block.center(), {pitch: getRandomFloat(0.8,1.2)})}
+    if (sound && block.above(1).typeId != 'vc:advanced_note_block' && block.above(1).typeId != 'vc:advanced_note_block_ext' && block.above(1).typeId != 'vc:sequenced_emitter' && block.above(1).typeId != 'vc:rester') {block.dimension.playSound('note.bd', block.center(), {pitch: getRandomFloat(0.8,1.2)})}
     else {
         var delay = 0;
         for (let i = 1; i < 25; i++) {
             if (block.above(i).typeId == 'vc:rester') { delay += block.above(i).permutation.getState('vc:beats'); continue; }
-            if (block.above(i).typeId != 'vc:advanced_note_block') break;
+            if (block.above(i).typeId == "vc:sequenced_emitter") {flashEmitter(block.above(i)); continue;}
+            if (block.above(i).typeId != 'vc:advanced_note_block' && block.above(i).typeId != 'vc:advanced_note_block_ext') break;
             SERVER.system.runTimeout(() => { noteTime(block.above(i)) }, (!tickDelay || tickDelay <= 0 ? 1 : tickDelay/4)*delay)
         }
     }
+}
+/**@param {SERVER.Block} block*/
+function flashEmitter(block) {
+    const dir = block.permutation.getState("minecraft:cardinal_direction");
+    var cmd = `setblock ${vec3toString(block.location)} ${block.typeId}["minecraft:cardinal_direction"="${dir}","vc:lit"=${true}]`
+    SERVER.system.runTimeout(() => { block.dimension.runCommand(cmd) },0)
+    block.setType('minecraft:air')
+
+    SERVER.system.runTimeout(()=> {
+        var cmd = `setblock ${vec3toString(block.location)} ${block.typeId}["minecraft:cardinal_direction"="${dir}","vc:lit"=${false}]`
+        SERVER.system.runTimeout(() => { block.dimension.runCommand(cmd) },0)
+        block.setType('minecraft:air')
+    },5)
 }
 function getUseCount(pitch, octave) {
     const pitchOffsets = {

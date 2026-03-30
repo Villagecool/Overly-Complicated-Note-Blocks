@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.40",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:coda",
@@ -7,10 +7,6 @@
 				"category": "items"
 			},
 			"states": {
-				"vc:powered": [
-					false,
-					true
-				],
 				"vc:lit": [
 					false,
 					true
@@ -26,20 +22,15 @@
 					"texture": "vc_coda_top"
 				}
 			},
-			"minecraft:custom_components": [
-				"vc:coda",
-				"vc:redstone"
-			],
+			"vc:coda": {},
+			"vc:redstone": {},
 			"minecraft:redstone_conductivity": {
 				"allows_wire_to_step_down": true,
 				"redstone_conductor": true
 			},
-			"minecraft:tick": {
-				"interval_range": [
-					1,
-					1
-				],
-				"looping": true
+			"minecraft:redstone_consumer": {
+				"min_power": 1,
+				"propagates_power": false
 			},
 			"minecraft:geometry": "minecraft:geometry.full_block",
 			"minecraft:map_color": "#909098",

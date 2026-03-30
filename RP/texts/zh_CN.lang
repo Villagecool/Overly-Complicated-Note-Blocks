@@ -1,11 +1,13 @@
 
 
-# By Sunrise Studio Addon Translator
+## By Sunrise Studio Addon Translator
 tile.vc:advanced_note_block.name=高级注释块
+tile.vc:advanced_note_block_ext.name=高级注释块
 tile.vc:conductor.name=司机
 tile.vc:metronome.name=节拍器
 tile.vc:coda.name=尾声
 tile.vc:rester.name=Rester
+tile.vc:sequenced_emitter.name=序列红石发射器
 
 advanced_note_block.title=配置注释块
 advanced_note_block.inst=Insturment

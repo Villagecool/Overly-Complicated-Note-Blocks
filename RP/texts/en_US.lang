@@ -1,8 +1,10 @@
 tile.vc:advanced_note_block.name=Advanced Note Block
+tile.vc:advanced_note_block_ext.name=Advanced Note Block
 tile.vc:conductor.name=Conductor
 tile.vc:metronome.name=Metronome
 tile.vc:coda.name=Coda
 tile.vc:rester.name=Rester
+tile.vc:sequenced_emitter.name=Sequenced Redstone Emitter
 
 advanced_note_block.title=Configure Note Block
 advanced_note_block.inst=Insturment

@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.80",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:metronome",
@@ -50,21 +50,30 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.2
 			},
+			"vc:metronome": {},
+			"vc:redstone": {},
 			"minecraft:redstone_conductivity": {
 				"allows_wire_to_step_down": true,
 				"redstone_conductor": true
 			},
-			"minecraft:tick": {
-				"interval_range": [
-					1,
-					1
-				],
-				"looping": true
+			"minecraft:item_visual": {
+				"geometry": "minecraft:geometry.full_block",
+				"material_instances": {
+					"*": {
+						"texture": "noteblock"
+					},
+					"north": {
+						"texture": "vc_metronome"
+					},
+					"south": {
+						"texture": "vc_metronome"
+					}
+				}
 			},
-			"minecraft:custom_components": [
-				"vc:metronome",
-				"vc:redstone"
-			],
+			"minecraft:redstone_consumer": {
+				"min_power": 1,
+				"propagates_power": false
+			},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "noteblock"

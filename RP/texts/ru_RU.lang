@@ -1,11 +1,13 @@
 
 
-# By Sunrise Studio Addon Translator
+## By Sunrise Studio Addon Translator
 tile.vc:advanced_note_block.name=Продвинутый нотный блок
+tile.vc:advanced_note_block_ext.name=Продвинутый нотный блок
 tile.vc:conductor.name=Водитель
 tile.vc:metronome.name=Метроном
 tile.vc:coda.name=Coda
 tile.vc:rester.name=Рестер
+tile.vc:sequenced_emitter.name=Секвенсорный редстоун-излучатель
 
 advanced_note_block.title=Настройка блока заметок
 advanced_note_block.inst=Инстурмент

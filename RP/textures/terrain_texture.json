@@ -43,6 +43,15 @@
 		"vc_metronome_right": {
 			"textures": "textures/blocks/metronome_right"
 		},
+		"vc_sequenced_emitter": {
+			"textures": "textures/blocks/sequenced_emitter"
+		},
+		"vc_sequenced_emitter_front": {
+			"textures": "textures/blocks/sequenced_emitter_front"
+		},
+		"vc_sequenced_emitter_front_on": {
+			"textures": "textures/blocks/sequenced_emitter_front_on"
+		},
 		"vc_coda": {
 			"textures": "textures/blocks/coda"
 		},

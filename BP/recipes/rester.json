@@ -2,7 +2,7 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "vc:advanced_note_block"
+            "identifier": "vc:rester"
         },
         "tags": [
             "crafting_table"
@@ -12,7 +12,7 @@
                 "tag":"minecraft:planks"
             },
             "C": {
-                "item": "copper_ingot"
+                "item": "mud"
             },
             "R": {
                 "item": "redstone"
@@ -20,12 +20,12 @@
         },
         "pattern": [
             "###",
-            "CRC",
-            "###"
+            "#R#",
+            "#C#"
         ],
         "result": {
-            "item": "vc:advanced_note_block",
-            "count": 4
+            "item": "vc:rester",
+            "count": 8
         }
     }
 }

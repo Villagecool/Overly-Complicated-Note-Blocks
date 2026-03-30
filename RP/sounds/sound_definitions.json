@@ -1,4 +1,17 @@
 {
-	"format_version": "1.14.0",
-	"sound_definitions": {}
+	"format_version": "1.20.30",
+	"sound_definitions": {
+		"note.electric_guitar": {
+			"__use_legacy_max_distance": true,
+			"category": "record",
+			"max_distance": 48.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/note/electric_gutiar"
+				}
+			]
+		}
+	}
 }

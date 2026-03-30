@@ -3,10 +3,14 @@ import * as UI from '@minecraft/server-ui';
 import { vec3toString, setPermutation } from './utils.js';
 import { noteTime, doTheCoda, findScores } from "./main.js"
 
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 	initEvent.blockComponentRegistry.registerCustomComponent('vc:redstone', {
-		onTick: e => {
-			let wasSucessful = e.block.getRedstonePower() > 0 ? true : checkRedstone(e.block);
+		onRedstoneUpdate: e => {
+			if (e.powerLevel > e.previousPowerLevel) {
+				if (e.block.typeId == 'vc:coda') doTheCoda(e.block);
+				else if (e.block.typeId == 'vc:metronome') findScores(e.block);
+			}
+			/*let wasSucessful = e.powerLevel > 0 ? true : checkRedstone(e.block);
 			//const wasSucessful = false;
 
 			if (e.block.typeId == 'vc:advanced_note_block') { // i split it up cus i think it optimizes the script a bit
@@ -25,7 +29,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 			}
 			try {
 				setPermutation(e.block, 'vc:powered', wasSucessful)
-			} catch (e) { }
+			} catch (e) { }*/
 }
 	});
 });

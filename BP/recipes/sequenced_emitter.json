@@ -2,30 +2,33 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "vc:advanced_note_block"
+            "identifier": "vc:sequenced_emitter"
         },
         "tags": [
             "crafting_table"
         ],
         "key": {
             "#": {
-                "tag":"minecraft:planks"
+                "item": "planks"
             },
             "C": {
                 "item": "copper_ingot"
             },
             "R": {
                 "item": "redstone"
+            },
+            "T": {
+                "item": "redstone_torch"
             }
         },
         "pattern": [
-            "###",
-            "CRC",
-            "###"
+            "CCC",
+            "TRT",
+            "CCC"
         ],
         "result": {
-            "item": "vc:advanced_note_block",
-            "count": 4
+            "item": "vc:sequenced_emitter",
+            "count": 1
         }
     }
 }

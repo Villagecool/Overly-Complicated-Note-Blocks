@@ -7,6 +7,9 @@
 	"vc:advanced_note_block": {
 		"sound": "wood"
 	},
+	"vc:advanced_note_block_ext": {
+		"sound": "wood"
+	},
 	"vc:conductor": {
 		"sound": "wood"
 	},
@@ -15,6 +18,9 @@
 	},
 	"vc:rester": {
 		"sound": "bamboo"
+	},
+	"vc:sequenced_emitter": {
+		"sound": "copper"
 	},
 	"vc:coda": {
 		"sound": "stone",

@@ -17,7 +17,7 @@
 		"uuid": "99d9509a-9205-405f-baaf-0c1577f38b8d",
 		"version": [
 			1,
-			0,
+			1,
 			0
 		]
 	},
@@ -54,11 +54,11 @@
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.18.0"
+			"version": "2.6.0"
 		},
 		{
 			"module_name": "@minecraft/server-ui",
-			"version": "1.2.0"
+			"version": "2.0.0"
 		}
 	]
 }
