@@ -65,4 +65,5 @@ The Sequenced Redstone Emitter will emmit a 5-tick pulse of redstone when set of
 ![SRE](/renders/sequenced_emitter.gif)
 
 This can be extremely helpful for special effects or redirecting song lines.
+
 ![SRE Connection](/renders/connection.png)
