@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.30",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:sequenced_emitter",
@@ -41,9 +41,20 @@
 				],
 				"looping": true
 			},
-			"minecraft:custom_components": [
-				//"vc:sequenced_emitter"
-			],
+			"minecraft:item_visual": {
+				"geometry": "minecraft:geometry.full_block",
+					"material_instances": {
+					"*": {
+						"texture": "vc_sequenced_emitter"
+					},
+					"north": {
+						"texture": "vc_sequenced_emitter_front"
+					},
+					"south": {
+						"texture": "vc_sequenced_emitter_front"
+					}
+				}
+			},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_sequenced_emitter"
